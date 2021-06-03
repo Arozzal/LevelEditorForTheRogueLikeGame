@@ -1,0 +1,33 @@
+﻿<Window x:Class="lvledit.MapResizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lvledit"
+        mc:Ignorable="d"
+        Title="Resize Window" Height="222.857" Width="279.429" ResizeMode="NoResize" IsVisibleChanged="Window_update" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="mapxsize" HorizontalAlignment="Left" Height="23" Margin="123,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="mapysize" HorizontalAlignment="Left" Height="23" Margin="123,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="currxsizelabel" Content="CurrentXSize:" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="83" RenderTransformOrigin="0.473,-0.275"/>
+        <Label x:Name="currysizelabel" Content="CurrentYSize:" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button x:Name="Okbutton" Content="OK" HorizontalAlignment="Left" Margin="18,131,0,0" VerticalAlignment="Top" Width="101" Height="38" Click="Okbutton_Click"/>
+        <Button x:Name="AbortButton" Content="Abort" HorizontalAlignment="Left" Margin="156,131,0,0" VerticalAlignment="Top" Width="87" Height="40" RenderTransformOrigin="1.115,0.372" Click="AbortButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.053"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="xvalue" Content="" HorizontalAlignment="Left" Margin="93,25,0,0" VerticalAlignment="Top" Height="23" Width="25"/>
+        <Label x:Name="yvalue" Content="" HorizontalAlignment="Left" Margin="93,78,0,0" VerticalAlignment="Top" Height="23" Width="25"/>
+
+    </Grid>
+</Window>
